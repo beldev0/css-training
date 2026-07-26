@@ -1,0 +1,99 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, aside, article, footer {
+    color: white;
+    background: #101010;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    gap: .5rem;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section"
+    "footer"
+    ;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 1fr repeat(3, auto);
+    grid-template-areas:
+    "article"
+    "aside1"
+    "aside2"
+    "aside3"
+    ;
+    gap: .5rem;
+    padding: .5rem;
+
+}
+
+article {
+    grid-area: article;
+}
+
+nav {
+    grid-area: nav;
+}
+
+section {
+    grid-area: section;
+}
+
+.aside1 {
+    grid-area: aside1;
+}
+
+.aside2 {
+    grid-area: aside2;
+}
+
+.aside3 {
+    grid-area: aside3;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+@media screen and (min-width:960px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "header header"
+        "nav section"
+        "footer footer"
+        ;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    section {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "article aside1"
+        "article aside2"
+        "article aside3"
+        ;
+    }
+}
