@@ -11,9 +11,11 @@
 body {
     background-color: rgb(26, 26, 26);
     color: white !important;
+    font-family: Lexend, sans-serif;
 }
 
 #main-container {
+    max-width: 1100px;
     width: 90vw;
     margin: 0 auto;
     text-align: center;
@@ -39,7 +41,7 @@ header {
     margin: 0 auto;
     border: 1px solid #333333;
     border-radius: 999px;
-    
+    z-index: 8;
 }
 
 .logo img {
@@ -68,6 +70,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 7;
     background-color: #CAFF33;
     height: 100vh;
     padding: 1.2rem;
@@ -124,8 +127,6 @@ header {
 
 .mobile-links a {
     padding: 1rem;
-
-    /* border-bottom: 1px solid #333333; */
 }
 
 .fic {
@@ -138,6 +139,283 @@ a.active-link {
     border: 1px solid #333333;
 
 }
+
+/* Banner section style */
+
+.banner {
+    padding-top: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.banner > .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.open-account {
+    align-self: center;
+    padding: 1rem 1.2rem;
+    color: #1C1C1C;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.banner-promise {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    padding: .5rem;
+    border-radius: 999px;
+    background-color: #262626;
+    font-size: 12px;
+}
+
+.banner-promise svg {
+    fill: #CAFF33;
+    border-radius: 999px;
+
+}
+
+.colored-text {
+    color: #CAFF33;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.banner .presentation {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    color: #E4E4E7;
+}
+
+/* Right part of banner */
+
+.banner .top-title {
+    font-size: .6rem;
+    font-weight: 400;
+    text-align: left;
+    margin: .8rem 0;
+}
+
+.positionned-div {
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    padding: .1rem .4rem;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    background: #22251B;
+    border-radius: 12px;
+}
+
+.right-top {
+    position: relative;
+}
+
+.plus-icon {
+    background-color: #CAFF33;
+    display: flex;
+    align-items: center;
+    padding: .1rem;
+    border-radius: 99px;
+}
+
+.plus-icon svg {
+    width: 100%;
+    fill: black;
+}
+
+.positionned-div-right {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem;
+}
+
+.positionned-div-right .price {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.positionned-div-right .mi {
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.banner .right-top {
+    padding: .5rem;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    width: 95%;
+    margin: 2rem auto;
+}
+
+.transaction-item {
+    display: flex;
+    text-align: left;
+    gap: .3rem;
+    padding: .7rem;
+    border-radius: 12px;
+    border: 1px solid #262626;
+}
+
+.transaction-item div {
+    flex: 1;
+}
+
+.transaction-title {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.transaction-detail {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-icon {
+    background-color: #CAFF33;
+    padding: .4rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+}
+
+.transaction-icon svg {
+    fill: black;
+    height: 12px;
+}
+
+.transaction-item:nth-child(1) {
+    background: #1C1C1C;
+    /* background-color: rgb(97, 107, 116); */
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.transaction-item:nth-child(2) {
+    background: #1B1B1B;
+    opacity: .6;
+    position: absolute;
+    top: 3rem;
+    left: .8rem;
+    right: .8rem;
+    z-index: 4;
+}
+
+.transaction-item:nth-child(3) {
+    background: #1A1A1A;
+    opacity: 0.2;
+    position: absolute;
+    top: 6rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 3;
+}
+
+.transaction-container {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 130px;
+    z-index: 2;
+}
+
+.exchange-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #1C1C1C;
+}
+
+.exchange-item .top, .exchange-container .bottom {
+    padding: 1rem;
+    border: 1px solid #262626;
+}
+
+.exchange-item .pays {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.exchange-item:first-of-type .top {
+    border-top-left-radius: 12px;
+}
+
+.exchange-item:first-of-type .bottom {
+    border-bottom-left-radius: 12px;
+}
+
+.exchange-item:last-of-type .top{
+    border-top-right-radius: 12px;
+    /* background: wheat; */
+}
+
+.exchange-item:last-of-type .bottom {
+    border-bottom-right-radius: 12px;
+}
+
+.exchange-btn {
+    outline: none;
+    border: none;
+    margin-block: 1.2rem;
+    padding: .6rem 1.5rem;
+    width: 100%;
+    border-radius: 99px;
+    background-color: #22251B;
+    color: #CAFF33;
+}
+
+.right .right-bottom {
+    display: flex;
+    background-color: #22251B;
+    justify-content: space-between  ;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    padding: .3rem .6rem;
+    margin-bottom: 1rem;
+    border-radius: 99px;
+    gap: .8rem;
+}
+
+.right .right-bottom .title {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.right .right-bottom .supported-currency {
+    background: #191919;
+    padding: .4rem .6rem;
+    border-radius: 999px;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.supported-currency .currency-icon {
+    background-color: #262626;
+    padding: .3rem .4rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+}
+
 
 @media screen and (min-width:1024px) {
     .mobile-nav, .menu-icon {
@@ -164,5 +442,35 @@ a.active-link {
     header {
         padding: .7rem 1rem;
         top: 1rem;
+        max-width: 1100px;
     }
+
+    .banner {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: space-between;
+        padding-top: 110px;
+
+    }
+
+    .banner > .left {
+        width: 40%;
+    }
+
+    .banner > .right {
+        width: 40%;
+    }
+    
+    .banner > .left {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .open-account {
+        align-self: flex-start;
+    }
+
 }
