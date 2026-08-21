@@ -381,6 +381,98 @@ a.active-link {
     margin-right: 1rem;
 }
 
+/* FAQ SECTION */
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    mask-image: linear-gradient(#191919, #191919);
+    -webkit-mask-image: linear-gradient(#000000, #191919);
+    margin-block: 3.5rem;
+}
+
+.faq-section-head .subtitle {
+    font-size: 12px;
+    font-weight: 300;
+    margin-block: .5rem;
+    padding-inline: 1rem;
+}
+
+.faq-questions-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .8rem;
+    mask-image: linear-gradient(#191919, rgba(25, 25, 25, 0.099));
+}
+
+
+.question {
+    padding: 0 1rem 1rem;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 10px;
+}
+
+.question-title {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1rem .4rem;
+    border-bottom: 1px solid #262626;
+    margin-bottom: .6rem;
+}
+
+.question-answer {
+    font-weight: 100;
+}
+
+.more-faq {
+    align-self: center;
+    border: 1px solid #262626;
+    outline: none;
+    padding: .6rem 1.2rem;
+    border-radius: 99px;
+    background: #1C1C1C;
+    color: white;
+}
+
+/* DOWN CTA */ 
+
+.down-cta {
+    padding: 1.5rem;
+    border: 1px solid #262626;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+    margin-block: 2rem;
+}
+
+.down-cta h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.down-cta .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 12px;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.content button {
+    padding: .8rem 1.3rem;
+    border-radius: 99px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #CAFF33;
+}
+
 
 /* FOOTER */
 
@@ -460,6 +552,7 @@ footer .bottom {
     background-color: #191919;
     border: 1px solid #262626;
 }
+
 
 
 @media screen and (min-width:1024px) {
@@ -597,6 +690,54 @@ footer .bottom {
         padding: 3rem 0;
         gap: 2rem;
     }
+
+     /* FAQ SECTION */
+
+    .faq-section {
+        text-align: left;
+    }
+
+    .faq-section-head .subtitle {
+        padding-left: 0;
+    }
+
+    .faq-questions-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .question-title {
+        font-size: 12px;
+        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .question {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    /* CTA SECTION */
+
+    .down-cta {
+        text-align: left;
+        padding: 3rem 2rem;
+        margin-block: 4rem;
+    }
+
+    .down-cta .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .content p {
+        width: 60%;
+    }
+
+    .content button {
+        margin: 0;
+    }
+
 
 
 }
