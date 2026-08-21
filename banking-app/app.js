@@ -1,11 +1,6 @@
-const menuTogglerIcon = document.querySelector('.menu-icon')
-const mobileNav       = document.querySelector('.mobile-nav')
-const closeNavbar     = document.querySelector('.mobile-navbar-close')
-const onNavbarToggle = (e) => mobileNav.classList.toggle('show-nav')
 
 const featureToggleButtons = document.querySelectorAll(".toggle-side button")
 const presentationView = document.querySelectorAll('.presentation-view')
-console.log(presentationView);
 
 const goleft = document.querySelector('.goleft')
 const goright = document.querySelector('.goright')
@@ -14,9 +9,6 @@ const carousel = document.querySelector('.carousel')
 const viewportWidth = window.matchMedia("(min-width: 1024px)")
 
 
-menuTogglerIcon.addEventListener('click', onNavbarToggle)
-
-closeNavbar.addEventListener('click', onNavbarToggle)
 
 featureToggleButtons.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
