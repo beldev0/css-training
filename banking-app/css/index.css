@@ -1214,8 +1214,13 @@ button.active-view {
 
     .carousel-wrapper {
         overflow: hidden;
+
     }
 
+    .mask {
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.152) , white 50%, rgba(0, 0, 0, 0.152) 90%); 
+
+    }
     .carousel {
         display: flex;
         gap: 1rem;
@@ -1235,6 +1240,7 @@ button.active-view {
         flex-direction: column;
         gap: 1rem;
         mask-image: none;
+        text-align: center;
     }
 
     .slider .quote::after,
