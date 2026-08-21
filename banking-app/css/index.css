@@ -868,7 +868,7 @@ button.active-view {
     height: 60px;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding: .6rem;
     margin-top: 1rem;
     margin-right: 1rem;
@@ -876,6 +876,117 @@ button.active-view {
     border: 1px solid #262626;
     border-radius: 99px;
     background-color: #1C1C1C;
+}
+
+.down-cta {
+    padding: 1.5rem;
+    border: 1px solid #262626;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+    margin-block: 2rem;
+}
+
+.down-cta h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.down-cta .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 12px;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.content button {
+    padding: .8rem 1.3rem;
+    border-radius: 99px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #CAFF33;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1C1C1C;
+}
+
+footer .body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.body>img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+footer nav {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    font-size: 12px;
+}
+
+footer .contact {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 1px solid #262626;
+    border-top: 1px solid #262626;
+    padding: 2rem 0;
+}
+
+.bottom .socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: -1.5rem;
+}
+
+.socials span {
+    padding: .5rem;
+    border-radius: 999px;
+    background-color: #CAFF33;
+    display: flex;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.contact img {
+    width: 10px;
+}
+
+footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-size: light;
+    padding: .8rem 1rem;
+    border-radius: 12px;
+    gap: 1.3rem;
+    background-color: #191919;
+    border: 1px solid #262626;
 }
 
 
@@ -1181,17 +1292,17 @@ button.active-view {
         text-align: left;
     }
 
-    .testimonials-head > div {
+    .testimonials-head>div {
         display: flex;
         justify-content: space-between;
     }
 
     .testimonials-head p {
-       width: 50%;
+        width: 50%;
     }
 
     .testimonials-btn {
-      margin: 0;
+        margin: 0;
     }
 
     .testimonials-btn button {
@@ -1218,9 +1329,10 @@ button.active-view {
     }
 
     .mask {
-        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.152) , white 50%, rgba(0, 0, 0, 0.152) 90%); 
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.152), white 50%, rgba(0, 0, 0, 0.152) 90%);
 
     }
+
     .carousel {
         display: flex;
         gap: 1rem;
@@ -1270,23 +1382,76 @@ button.active-view {
 
     .goleft {
         left: -3rem;
-        z-index: 2;
     }
 
     .goright {
         right: -4rem;
-        z-index: 2;
     }
 
     /* .forarrow {
         position: relative;
         /* border: 2px solid white; */
-        /* mask-image: linear-gradient(to right, rgba(0, 0, 0, .3), white, rgba(0,0,0,.4)); 
+    /* mask-image: linear-gradient(to right, rgba(0, 0, 0, .3), white, rgba(0,0,0,.4)); 
         text-align: center;
     } 
     */
-    .goleft:disabled, .goright:disabled {
+    .goleft:disabled,
+    .goright:disabled {
         cursor: not-allowed;
         opacity: .5;
     }
+
+    /* CTA SECTION */
+
+    .down-cta {
+        text-align: left;
+        padding: 3rem 2rem;
+        margin-block: 4rem;
+    }
+
+    .down-cta .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .content p {
+        width: 60%;
+    }
+
+    .content button {
+        margin: 0;
+    }
+
+    /* FOOTER */
+
+    footer .body {
+        padding: 3rem 2rem;
+        max-width: 1100px;
+    }
+
+    .contact p:last-child {
+        margin: 0;
+    }
+
+    footer .contact p {
+        flex: none;
+    }
+
+    .bottom .socials {
+        margin-top: 0;
+    }
+
+    footer .bottom {
+        flex-direction: row;
+        border-radius: 99px;
+        padding: 1rem 1.5rem;
+    }
+
+    .body .contact {
+        padding: 3rem 0;
+        gap: 2rem;
+    }
+
+
 }
