@@ -1,0 +1,174 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+
+body {
+    background-color: #191919;
+    color: white !important;
+    font-family: Lexend, sans-serif;
+}
+
+#main-container {
+    max-width: 1100px;
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navbar style */
+
+.desktop-nav,
+.right-btns {
+    display: none;
+}
+
+header {
+    padding: .5rem;
+    background-color: #1C1C1C;
+    position: fixed;
+    top: .8rem;
+    width: 90vw;
+    margin: 0 auto;
+    border: 1px solid #333333;
+    border-radius: 999px;
+    z-index: 8;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.menu-icon {
+    padding: .2rem .7rem;
+    background-color: #CAFF33;
+    border-radius: 99px;
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    background-color: #CAFF33;
+    height: 100vh;
+    padding: 1.2rem;
+    background: rgb(26, 26, 26);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease, visibility .3s;
+}
+
+.show-nav {
+    /* display: flex; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-navbar-close {
+    width: 40px;
+}
+
+.flex {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2rem);
+}
+
+.unfill-btn {
+    outline: none;
+    color: white;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    padding: .5rem 1.3rem;
+
+}
+
+.filled-btn {
+    border: none;
+    outline: none;
+    padding: .5rem 1.3rem;
+    background: #CAFF33;
+    border-radius: 999px;
+}
+
+.mobile-links a {
+    padding: 1rem;
+}
+
+.fic {
+    margin-top: 90px;
+}
+
+a.active-link {
+    background-color: #262626;
+    border-radius: 999px;
+    border: 1px solid #333333;
+}
+
+
+@media screen and (min-width:1024px) {
+
+    .mobile-nav,
+    .menu-icon {
+        display: none;
+    }
+
+    .right-btns,
+    .desktop-nav {
+        display: flex;
+    }
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .desktop-nav {
+        height: 100%;
+    }
+
+    .desktop-nav a {
+        padding: .5rem 1rem;
+    }
+
+    header {
+        padding: .7rem 1rem;
+        top: 1rem;
+        max-width: 1100px;
+    }
+}
